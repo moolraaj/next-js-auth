@@ -1,0 +1,139 @@
+.sign_up_wrapper {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    width: 100%;
+    padding: 32px;
+    box-shadow: 0px 15px 50px 1px rgba(0, 0, 0, 0.08);
+}
+.footer_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    align-items: center;
+}
+.infos {
+    display: flex;
+    justify-content: center;
+}
+.unerinfos {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.footer {
+    background: #fff!important;
+}
+.wrapper p {
+    margin: 0;
+    text-align: center;
+}
+.unerinfos li {
+    list-style: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.sign_inner {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0px 16px;
+}
+
+
+
+.input_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.logo img {
+    height: 60px;
+    width: 60px;
+}
+.header_inner {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0px 20px;
+}
+.header_wrapper {
+    display: grid;
+    grid-template-columns: 20% 1fr 10%;
+    align-items: center;
+    gap: 16px;
+}
+.header_outer {
+    background: skyblue;
+    box-shadow: 0px 15px 50px 1px rgba(0, 0, 0, 0.08);
+    padding: 12px 0px;
+}
+ul.nav-wrapper {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    gap: 12px;
+}
+ul.nav-wrapper li {
+    list-style: none;
+}
+ul.nav-wrapper li a {
+    text-transform: capitalize;
+    color: #000;
+    text-decoration: none;
+}
+.input_wrapper input {
+    padding: 12px;
+    border: 1px solid #8080803d;
+    border-radius: 4px;
+    margin: 12px 0px;
+}
+
+.button_wrapper button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 12px 52px;
+    border: unset;
+    background: skyblue;
+    color: #000;
+    cursor: pointer;
+}
+input:focus-visible {
+    outline: unset;
+}
+.verify_user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.credintials p {
+    margin: 0px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.credintials {
+    display: flex;
+    margin-top: 22px;
+    width: 100%;
+}
+button.verify {
+    padding: 12px 62px;
+    border: unset;
+    background: skyblue;
+    border-radius: 4px;
+}
+.button_wrapper {
+    width: 100%;
+}
+
+.input_wrapper span {
+    color: #ff000080;
+    margin: 4px 0px 8px 0px;
+}
