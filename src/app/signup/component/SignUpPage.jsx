@@ -98,7 +98,7 @@ function SignUpPage() {
                
             </div>
             <div className='credintials'>
-                <p>already have an account? got to  <Link href={`/login`}>login</Link></p>
+                <p>if you have already an account? go to  <Link href={`/login`}>login</Link></p>
                
             </div>
         </div>

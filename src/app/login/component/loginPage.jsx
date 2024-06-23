@@ -61,6 +61,7 @@ function LoginPage() {
 
     return (
         <div className="sign_up_wrapper">
+                 
             <div className="input_wrapper">
                 <label htmlFor="email">Email</label>
                 <input type="email" name="email" value={user.email} onChange={getUserValues} />
@@ -77,10 +78,11 @@ function LoginPage() {
                 <button onClick={submitUserDetails}>Login</button>
             </div>
             <div className='credintials'>
-                <p>Not have an account? please signup first  <Link href={`/signup`}>signup</Link></p>
+                <p>Not have an account? please go to <Link href={`/signup`}>signup</Link></p>
                
             </div>
         </div>
+   
     );
 }
 

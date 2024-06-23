@@ -45,6 +45,33 @@ body{
 .action_buttons button svg {
     color: red;
 }
+.user_pofile_inner {
+    max-width: 400px;
+    margin: auto;
+    padding: 0px 20px;
+}
+.user_profile_wrapper button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 12px 52px;
+    border: unset;
+    background: skyblue;
+    color: #000;
+    cursor: pointer;
+}
+.user_profile_wrapper h1 {
+    margin: 0px;
+    text-align: center;
+}
+.user_profile_outer {
+    padding: 80px 0px;
+}
+.user_profile_wrapper {
+    padding: 30px;
+    border: 1px solid skyblue;
+    border-radius: 4px;
+    background: #fff;
+}
 .action_buttons a {
     font-size: 20px;
     color: #808080;
@@ -122,6 +149,9 @@ span.p-infos {
     max-width: 1300px;
     margin: auto;
     padding: 0px 16px;
+    display: flex;
+    align-items: center;
+    height: 100vh;
 }
 
 
