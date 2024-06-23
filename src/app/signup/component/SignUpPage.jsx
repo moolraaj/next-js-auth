@@ -3,9 +3,11 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
-
+import hide from '../../images/hide.png'
+import show from '../../images/view.png'
 function SignUpPage() {
-    let router=useRouter()
+    let router = useRouter()
+    let [pass, setPass] = useState(false)
     const [user, setUser] = useState({
         username: '',
         email: '',
@@ -52,9 +54,9 @@ function SignUpPage() {
                     body: JSON.stringify(user)
                 });
 
-                resp=await resp.json()
+                resp = await resp.json()
                 console.log(resp)
-                if(resp){
+                if (resp) {
                     toast.success(resp.message)
                     router.push(`/verifyemail`)
                 }
@@ -64,7 +66,7 @@ function SignUpPage() {
                     password: '',
                 })
 
-                 
+
             } catch (error) {
                 console.error('Error:', error);
             }
@@ -72,7 +74,7 @@ function SignUpPage() {
     };
 
     return (
-        
+
 
         <div className="sign_up_wrapper">
             <div className="input_wrapper">
@@ -89,20 +91,23 @@ function SignUpPage() {
 
             <div className="input_wrapper">
                 <label htmlFor="password">Password</label>
-                <input type="password" name="password" value={user.password} onChange={getUserValues} />
+                <div className="pass-wrapper">
+                    <input type={pass === false ? 'password' : 'text'} name="password" value={user.password} onChange={getUserValues} />
+                    <button className='hide-and-seek' onClick={() => setPass(!pass)}>{pass === false ? <img src={hide.src} /> : <img src={show.src} />}</button>
+                </div>
                 {errors.password && <span>{errors.password}</span>}
             </div>
 
             <div className="button_wrapper">
                 <button onClick={submitUserDetails}>Sign Up</button>
-               
+
             </div>
             <div className='credintials'>
                 <p>if you have already an account? go to  <Link href={`/login`}>login</Link></p>
-               
+
             </div>
         </div>
-       
+
     );
 }
 

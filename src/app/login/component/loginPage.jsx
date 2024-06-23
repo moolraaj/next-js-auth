@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
-
+import hide from '../../images/hide.png'
+import show from '../../images/view.png'
 function LoginPage() {
     const router = useRouter();
     const [user, setUser] = useState({ email: '', password: '' });
     const [errors, setErrors] = useState({});
+    let [pass, setPass] = useState(false)
 
     const getUserValues = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value });
@@ -70,7 +72,12 @@ function LoginPage() {
 
             <div className="input_wrapper">
                 <label htmlFor="password">Password</label>
-                <input type="password" name="password" value={user.password} onChange={getUserValues} />
+                <div className="pass-wrapper">
+                <input type={pass===false?'password':'text'} name="password" value={user.password} onChange={getUserValues}/>
+                <button className='hide-and-seek'  onClick={()=>setPass(!pass)}>{pass===false?<img src={hide.src}/>:<img src={show.src}/>}</button>
+
+                </div>
+
                 {errors.password && <span>{errors.password}</span>}
             </div>
 

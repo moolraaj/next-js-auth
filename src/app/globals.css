@@ -153,6 +153,26 @@ span.p-infos {
     align-items: center;
     height: 100vh;
 }
+button.hide-and-seek {
+    background: unset;
+    border: unset;
+    cursor: pointer;
+    position: absolute;
+    height: 22px;
+    right: 6px;
+    bottom: 22px;
+
+}
+button.hide-and-seek img {
+    height: 100%;
+    width: 100%;
+ 
+}
+.pass-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
 
 
 
@@ -160,6 +180,7 @@ span.p-infos {
     display: flex;
     flex-direction: column;
     width: 100%;
+    position: relative;
 }
 
 .logo img {
@@ -211,6 +232,9 @@ ul.nav-wrapper li a {
     background: skyblue;
     color: #000;
     cursor: pointer;
+    font-size: 16px;
+    font-family: montserrat;
+    font-weight: 500;
 }
 input:focus-visible {
     outline: unset;

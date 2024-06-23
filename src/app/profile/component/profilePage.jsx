@@ -6,6 +6,7 @@ import { toast } from 'sonner'
 function ProfilePage() {
     let router=useRouter()
     let [user, setUser] = useState([])
+  
 
     let loadUserDetails = async () => {
      
