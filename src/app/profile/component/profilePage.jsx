@@ -16,6 +16,7 @@ function ProfilePage() {
     useEffect(() => {
         loadUserDetails()
     }, [])
+    
 
     const logoutUser = async () => {
         let resp = await fetch('/api/users/logout')
@@ -26,11 +27,11 @@ function ProfilePage() {
         }
     }
 
-    console.log(user)
+  
 
     return (
         <>
-            <h1>welcome {user?'no user':user?.username || ''}</h1>
+            <h1>welcome {!user?'no user':user ||''}</h1>
             <button onClick={logoutUser}>logout</button>
         </>
     )

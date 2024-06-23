@@ -47,7 +47,7 @@ function LoginPage() {
                 const data = await response.json();
                 if (response.ok) {
                     toast.success(data.message);
-                    router.push('/profile');
+                    router.push('/products');
                     setUser({ email: '', password: '' });
                 } else {
                     toast.error(data.message);

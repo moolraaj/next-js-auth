@@ -9,7 +9,7 @@ export function middleware(request) {
     let publicPath=pathname==='/login'||pathname==='/signup'||pathname==='/verifyemail'
 
     if(publicPath && token){
-        return NextResponse.redirect(new URL('/profile', request.url));
+        return NextResponse.redirect(new URL('/', request.url));
     }
     if(!publicPath && !token){
         return NextResponse.redirect(new URL('/login', request.url));
@@ -22,6 +22,11 @@ export const config = {
         '/login',
         '/signup',
         '/profile',
-        '/verifyemail',    
+        '/verifyemail', 
+        '/products',
+        '/add-products',
+        '/update-product/:id*'
+       
+           
     ]
 };

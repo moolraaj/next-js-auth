@@ -7,7 +7,7 @@ function HeaderPage() {
     let fetchAllUers=async()=>{
         let resp=await fetch('/api/users/me')
         let data=await resp.json()
-        setUser(data.user)
+        setUser(data?.user?.username)
         
 
     }
@@ -21,16 +21,20 @@ function HeaderPage() {
         <div className="header_inner">
             <div className="header_wrapper">
                 <div className="logo">
+                    <Link href={`/`}>
                     <img src={logo.src} alt="logo" />
+                    </Link>
                 </div>
                 <div className="ul-navbar">
                     <ul className='nav-wrapper'>
+                        <li><Link href='/products'>products</Link></li>
                         <li><Link href='/add-products'>add products</Link></li>
                         <li><Link href='/profile'>profile</Link></li>
+                       
                     </ul>
                 </div>
                 <div className="user">
-                    welcome  {user===null?'no user found':user?.map((e,index)=><span key={index}>{e.username}</span>)}
+                    welcome  (<span>{!user?'no user':user||''}</span>)
                 </div>
             </div>
         </div>

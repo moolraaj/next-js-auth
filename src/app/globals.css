@@ -1,3 +1,85 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url('../app/font/montserrat.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ 
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat';
+    font-weight: 500;
+}
+.product_inner {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0px 20px;
+}
+.add_outer {
+    padding: 80px 0px;
+}
+
+.outer_inner {
+    padding: 20px 0px;
+}
+.product_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.action_buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.action_buttons button {
+    background: unset;
+    border: unset;
+    cursor: pointer;
+}
+.action_buttons button svg {
+    font-size: 20px;
+}
+.action_buttons button svg {
+    color: red;
+}
+.action_buttons a {
+    font-size: 20px;
+    color: #808080;
+}
+.products {
+    padding: 20px;
+    box-shadow: 0px 15px 50px 1px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+}
+
+.product_outer {
+    padding: 80px 0px;
+}
+
+.product_infos ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+.product_wrapper h1 {
+    font-size: 22px;
+    color: skyblue;
+}
+
+.product_infos ul li {
+    display: flex;
+    justify-content: space-between;
+}
+span.p-infos {
+    font-weight: 600;
+}
+
+.product_infos ul li {
+    list-style: none;
+}
 .sign_up_wrapper {
     max-width: 400px;
     margin: auto;
@@ -34,10 +116,6 @@
 }
 .unerinfos li {
     list-style: none;
-}
-body{
-    margin: 0;
-    padding: 0;
 }
 
 .sign_inner {
