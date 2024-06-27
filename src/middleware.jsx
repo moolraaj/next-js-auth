@@ -9,7 +9,7 @@ export function middleware(request) {
     let publicPath=pathname==='/login'||pathname==='/signup'||pathname==='/verifyemail'
 
     if(publicPath && token){
-        return NextResponse.redirect(new URL('/', request.url));
+        return NextResponse.redirect(new URL('/products', request.url));
     }
     if(!publicPath && !token){
         return NextResponse.redirect(new URL('/login', request.url));

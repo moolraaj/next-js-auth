@@ -17,6 +17,20 @@ body{
     margin: auto;
     padding: 0px 20px;
 }
+.search_outer {
+    padding: 80px 0px 0px 0px;
+}
+.search_inner {
+    max-width: 800px;
+    margin: auto;
+    padding: 0px 20px;
+}
+.search_wrapper input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid skyblue;
+    border-radius: 4px;
+}
 .add_outer {
     padding: 80px 0px;
 }
